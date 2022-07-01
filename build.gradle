@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.10-SNAPSHOT'
+	id 'fabric-loom' version '0.11-SNAPSHOT'
 	id 'maven-publish'
 	id "org.quiltmc.quilt-mappings-on-loom" version "4.2.0"
 }
@@ -20,6 +20,11 @@ repositories {
 		name = 'Quilt Snapshots'
 		url = 'https://maven.quiltmc.org/repository/snapshot'
 	}
+
+	maven {
+		name = 'TerraformersMC'
+		url = 'https://maven.terraformersmc.com/releases'
+	}
 }
 
 dependencies {
@@ -30,6 +35,8 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modLocalRuntime "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
 processResources {
