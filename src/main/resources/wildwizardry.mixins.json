@@ -3,7 +3,9 @@
   "minVersion": "0.8",
   "package": "io.github.thepoultryman.wildwizardry.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [],
+  "mixins": [
+    "SaddledPigSpeedup"
+  ],
   "injectors": {
     "defaultRequire": 1
   }
