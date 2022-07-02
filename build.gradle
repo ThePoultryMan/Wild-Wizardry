@@ -26,6 +26,10 @@ repositories {
 		name = 'TerraformersMC'
 		url = 'https://maven.terraformersmc.com/releases'
 	}
+
+	maven {
+		url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+	}
 }
 
 dependencies {
@@ -36,6 +40,8 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modImplementation "software.bernie.geckolib:geckolib-fabric-1.19:${project.geckolib_version}"
 
 	modLocalRuntime "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
