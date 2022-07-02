@@ -24,7 +24,7 @@ public class PigStatueBlockEntity extends AnimalStatueBlockEntity implements IAn
 
     @Override
     public void registerControllers(AnimationData animationData) {
-        animationData.addAnimationController(new AnimationController<PigStatueBlockEntity>(this, "controller", 0, this::predicate));
+        animationData.addAnimationController(new AnimationController<>(this, "controller", 0, this::predicate));
     }
 
     @Override
