@@ -6,7 +6,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
-import software.bernie.geckolib3.core.builder.AnimationBuilder;
 import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
@@ -20,8 +19,7 @@ public class PigStatueBlockEntity extends AnimalStatueBlockEntity implements IAn
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.pig_statue.idle", true));
-        return PlayState.CONTINUE;
+        return PlayState.STOP; // There are no animations currently
     }
 
     @Override
