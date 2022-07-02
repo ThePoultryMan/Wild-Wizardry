@@ -19,6 +19,9 @@
     "entrypoints": {
         "main": [
             "io.github.thepoultryman.wildwizardry.WildWizardry"
+        ],
+        "client": [
+            "io.github.thepoultryman.wildwizardry.WildWizardryClient"
         ]
     },
     "mixins": [
