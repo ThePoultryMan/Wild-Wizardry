@@ -28,7 +28,12 @@ repositories {
 	}
 
 	maven {
-		url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+		url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+	}
+
+	maven {
+		name = 'CottonMC'
+		url = 'https://server.bbkr.space/artifactory/libs-release/'
 	}
 }
 
@@ -42,6 +47,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modImplementation "software.bernie.geckolib:geckolib-fabric-1.19:${project.geckolib_version}"
+	include modImplementation("io.github.cottonmc:LibGui:${project.libgui_version}")
 
 	modLocalRuntime "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
