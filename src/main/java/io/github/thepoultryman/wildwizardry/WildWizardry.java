@@ -1,6 +1,7 @@
 package io.github.thepoultryman.wildwizardry;
 
 import io.github.thepoultryman.wildwizardry.registry.BlockRegistry;
+import io.github.thepoultryman.wildwizardry.registry.GuiRegistry;
 import io.github.thepoultryman.wildwizardry.registry.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -15,5 +16,6 @@ public class WildWizardry implements ModInitializer {
 		BlockRegistry.registerBlocks();
 		BlockRegistry.BlockEntityRegistry.registerBlockEntities();
 		ItemRegistry.BlockItemRegistry.registerBlockItems();
+		GuiRegistry.registerScreenHandlers();
 	}
 }
