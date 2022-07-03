@@ -5,6 +5,7 @@ import io.github.thepoultryman.wildwizardry.pig.statue.screen.PigGuiDescription;
 import io.github.thepoultryman.wildwizardry.pig.statue.screen.PigStatueScreen;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
+import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 
@@ -12,7 +13,8 @@ public class GuiRegistry {
     public static ScreenHandlerType<PigGuiDescription> PIG_STATUE_SCREEN;
 
     public static void registerScreenHandlers() {
-        PIG_STATUE_SCREEN = ScreenHandlerRegistry.registerSimple(new Identifier(WildWizardry.MOD_ID, "pig_statue"), PigGuiDescription::new);
+        PIG_STATUE_SCREEN = ScreenHandlerRegistry.registerSimple(new Identifier(WildWizardry.MOD_ID, "pig_statue"),
+                ((syncId, inventory) -> new PigGuiDescription(syncId, inventory, ScreenHandlerContext.EMPTY)));
     }
 
     public static void registerScreenHandlersClient() {

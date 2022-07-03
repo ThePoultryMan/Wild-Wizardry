@@ -7,6 +7,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.util.math.BlockPos;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -19,7 +20,7 @@ public class PigStatueBlockEntity extends AnimalStatueBlockEntity {
 
     @Override
     public ScreenHandler createMenu(int i, PlayerInventory playerInventory, PlayerEntity playerEntity) {
-        return new PigGuiDescription(i, playerInventory);
+        return new PigGuiDescription(i, playerInventory, ScreenHandlerContext.create(world, pos));
     }
 
     @Override
